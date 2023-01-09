@@ -1,2 +1,38 @@
-# So_long-42-
-A little 2D game created with C in witch you have to collect items to open a door and exit.
+
+# :video_game: SO_LONG [:es:]
+
+#### Resumen
+> Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
+
+### INFO
+
+|   Keywords   |           Skills          |
+|--------------|:-------------------------:|
+| Applicative  |   Imperative programming  |
+|              |          Graphics         |
+
+### ESTADO
+#### Starting
+
+![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive)
+<!-- ![result](https://img.shields.io/badge/RESULTADO-125%25-green) -->
+
+<hr/>
+
+# :video_game: SO_LONG [:gb:]
+
+#### Summary
+> This project is a small 2D game with minilibx. You'll learn about textures, sprites and tiles.
+
+### INFO
+
+|   Keywords   |           Skills          |
+|--------------|:-------------------------:|
+| Applicative  |   Imperative programming  |
+|              |          Graphics         |
+
+### STATUS
+#### In Progress
+
+<!-- ![result](https://img.shields.io/badge/RESULT-1250%25-green) -->
+![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive)
