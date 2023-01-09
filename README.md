@@ -1,6 +1,11 @@
 
 # :video_game: SO_LONG [:es:]
 
+### clone
+~~~~~
+git clone https://github.com/victorFernandezF/cursus_tmp.git
+~~~~~
+
 #### Resumen
 > Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
 
