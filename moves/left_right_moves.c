@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:33:21 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/09 13:47:16 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/09 14:13:56 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_game	right_move(t_game game, char **map, int flag)
 			}
 			j++;
 		}
-		draw_map(game, map, img_position);
+		draw_map(game, map, game.player_right.reference, img_position);
 		i++;
 	}
 	return (game);
@@ -62,7 +62,7 @@ t_game	left_move(t_game game, char **map, int flag)
 			}
 			j++;
 		}
-		draw_map(game, map, img_position);
+		draw_map(game, map, game.player_left.reference, img_position);
 		i++;
 	}
 	return (game);
@@ -90,7 +90,7 @@ t_game	up_move(t_game game, char **map, int flag)
 			}
 			j++;
 		}
-		draw_map(game, map, img_position);
+		draw_map(game, map, game.player_up.reference, img_position);
 		i++;
 	}
 	return (game);
@@ -118,7 +118,7 @@ t_game	down_move(t_game game, char **map, int flag)
 			}
 			j++;
 		}
-		draw_map(game, map, img_position);
+		draw_map(game, map, game.player_down.reference, img_position);
 		i++;
 	}
 	return (game);

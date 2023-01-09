@@ -6,11 +6,24 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 11:08:26 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/09 11:46:42 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/09 14:03:40 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/so_long.h"
+
+t_game	load_images(t_game game)
+{
+	game.wall = ft_new_sprite(game.mlx, "img/wall.xpm");
+	game.floor = ft_new_sprite(game.mlx, "img/floor.xpm");
+	game.door = ft_new_sprite(game.mlx, "img/door.xpm");
+	game.object = ft_new_sprite(game.mlx, "img/object.xpm");
+	game.player_right = ft_new_sprite(game.mlx, "img/tanky_right.xpm");
+	game.player_left = ft_new_sprite(game.mlx, "img/tanky_left.xpm");
+	game.player_up = ft_new_sprite(game.mlx, "img/tanky_up.xpm");
+	game.player_down = ft_new_sprite(game.mlx, "img/tanky_down.xpm");
+	return (game);
+}
 
 t_image	ft_new_sprite(void *mlx, char *path)
 {
