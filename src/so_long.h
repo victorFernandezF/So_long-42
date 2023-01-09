@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/09 12:05:49 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/09 13:35:34 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,12 @@ t_game		game_start(t_game game);
 t_game		load_images(t_game game);
 t_game		open_window(t_game game);
 t_game		draw_map(t_game game, char **map, t_vector img_position);
+
+	//MOVES
+t_game		right_move(t_game game, char **map, int flag);
+t_game		left_move(t_game game, char **map, int flag);
+t_game		up_move(t_game game, char **map, int flag);
+t_game		down_move(t_game game, char **map, int flag);
 
 	// TESTING
 void		show_leaks(void);
