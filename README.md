@@ -1,7 +1,7 @@
 
 # :video_game: SO_LONG [:es:]
 
-### clone
+### clone 
 ~~~~~
 git clone https://github.com/victorFernandezF/cursus_tmp.git
 ~~~~~
