@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/09 19:31:35 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/10 12:09:46 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,9 @@ typedef struct s_game
 	char		*map_file;
 	void		*mlx;
 	int			collect;
+	int			flag;
+	int			is_finish;
+	char		**og_map;
 	t_map		map;
 	t_window	win;
 	t_image		wall;
@@ -132,13 +135,13 @@ t_map		map_list_init(void);
 t_game		game_start(t_game game);
 t_game		load_images(t_game game);
 t_game		open_window(t_game game);
-t_game		draw_map(t_game game, char **map, void *player, t_vector img_position);
+t_game		draw_map(t_game game, char **map, void *player, t_vector img_pos);
 
 	//MOVES
-t_game		right_move(t_game game, char **map, int flag, t_vector img_pos);
-t_game		left_move(t_game game, char **map, int flag, t_vector img_pos);
-t_game		up_move(t_game game, char **map, int flag, t_vector img_pos);
-t_game		down_move(t_game game, char **map, int flag, t_vector img_pos);
+t_game		right_move(t_game game, char **map, t_vector img_pos);
+t_game		left_move(t_game game, char **map, t_vector img_pos);
+t_game		up_move(t_game game, char **map, t_vector img_pos);
+t_game		down_move(t_game game, char **map, t_vector img_pos);
 
 	// TESTING
 void		show_leaks(void);
@@ -146,5 +149,8 @@ void		show_leaks(void);
 t_game		destroy_aux(char map, t_game game);
 t_game		ft_destroy_map(t_game game, char **map);
 t_game		check_door(t_game game);
+t_game		check_everything(t_game game, int i, int j, char **map);
+void		finish_game(t_game game);
+
 
 #endif

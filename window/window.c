@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 12:47:50 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/09 14:10:58 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/10 10:31:28 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,23 +30,26 @@ t_game	open_window(t_game game)
 	return (game);
 }
 
-static t_game	draw_aux(char map, t_game game, void *player, t_vector img_position)
+static t_game	draw_aux(char map, t_game game, void *player, t_vector img_pos)
 {
 	if (map == '1')
 		mlx_put_image_to_window(game.mlx, game.win.reference,
-			game.wall.reference, img_position.x, img_position.y);
+			game.wall.reference, img_pos.x, img_pos.y);
 	else if (map == 'E')
 		mlx_put_image_to_window(game.mlx, game.win.reference,
-			game.door.reference, img_position.x, img_position.y);
+			game.door.reference, img_pos.x, img_pos.y);
 	else if (map == 'C')
 		mlx_put_image_to_window(game.mlx, game.win.reference,
-			game.object.reference, img_position.x, img_position.y);
+			game.object.reference, img_pos.x, img_pos.y);
 	else if (map == 'P')
 		mlx_put_image_to_window(game.mlx, game.win.reference,
-			player, img_position.x, img_position.y);
+			player, img_pos.x, img_pos.y);
+	else if (map == 'F')
+		mlx_put_image_to_window(game.mlx, game.win.reference,
+			game.door_open.reference, img_pos.x, img_pos.y);
 	else
 		mlx_put_image_to_window(game.mlx, game.win.reference,
-			game.floor.reference, img_position.x, img_position.y);
+			game.floor.reference, img_pos.x, img_pos.y);
 	return (game);
 }
 
