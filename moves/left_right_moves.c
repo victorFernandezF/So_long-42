@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:33:21 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/10 12:58:14 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:29:55 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,29 @@ static int	check_player_wall(char c1, char c2)
 	return (0);
 }
 
-static int	chek_something(int i, int j, t_game game)
+static int	chek_something(int i, int j, int dir, t_game game)
 {
-	if (game.og_map[i][j] == 'E')
-		return (1);
+	if (dir == 0)
+		if (game.og_map[i][j + 1] == 'E')
+			return (1);
+	if (dir == 1)
+		if (game.og_map[i][j - 1] == 'E')
+			return (1);
+	if (dir == 2)
+		if (game.og_map[i - 1][j] == 'E')
+			return (1);
+	if (dir == 3)
+		if (game.og_map[i + 1][j] == 'E')
+			return (1);
 	return (0);
+}
+
+t_game	is_game_over(t_game game, char **map, void *player, t_vector img_pos)
+{
+	if (game.is_finish == 1)
+		last_map(game, map, player, img_pos);
+	draw_map(game, map, player, img_pos);
+	return (game);
 }
 
 /*
@@ -40,10 +58,10 @@ t_game	right_move(t_game game, char **map, t_vector img_pos)
 	i = -1;
 	while (++i < game.map.height)
 	{
-		j = 0;
-		while (j < game.map.width && game.flag == 0)
+		j = -1;
+		while (++j < game.map.width && game.flag == 0)
 		{
-			game.is_finish = chek_something(i, j, game);
+			game.is_finish = chek_something(i, j, 0, game);
 			if (check_player_wall(map[i][j], map[i][j + 1]))
 			{
 				if (map[i][j + 1] == 'C')
@@ -51,16 +69,11 @@ t_game	right_move(t_game game, char **map, t_vector img_pos)
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i][j + 1] = 'P';
-				//printf(" og -> %c\n now -> %c", game.og_map[i][j+1], map[i][j]);
-				printf("\ni -> %i", i);
-				printf("\n");
-				printf("j -> %i", j);
 			}
-			j++;
 		}
 	}
 	game = check_door(game);
-	draw_map(game, map, game.player_right.reference, img_pos);
+	game = is_game_over(game, map, game.player_right.reference, img_pos);
 	return (game);
 }
 
@@ -74,14 +87,15 @@ t_game	left_move(t_game game, char **map, t_vector img_pos)
 	int			i;
 	int			j;
 
-	i = 0;
-	while (i < game.map.height)
+	(void)img_pos;
+	i = -1;
+	while (++i < game.map.height)
 	{
-		j = 0;
-		while (j < game.map.width && game.flag == 0)
+		j = -1;
+		while (++j < game.map.width && game.flag == 0)
 		{
-			if (map[i][j] == 'P' && map[i][j - 1] != '1'
-				&& map[i][j - 1] != 'E')
+			game.is_finish = chek_something(i, j, 1, game);
+			if (check_player_wall(map[i][j], map[i][j - 1]))
 			{
 				if (map[i][j - 1] == 'C')
 					game.collect += 1;
@@ -89,12 +103,10 @@ t_game	left_move(t_game game, char **map, t_vector img_pos)
 				game.flag = 1;
 				map[i][j - 1] = 'P';
 			}
-			j++;
 		}
-		i++;
 	}
 	game = check_door(game);
-	draw_map(game, map, game.player_left.reference, img_pos);
+	game = is_game_over(game, map, game.player_left.reference, img_pos);
 	return (game);
 }
 
@@ -108,14 +120,15 @@ t_game	up_move(t_game game, char **map, t_vector img_pos)
 	int			i;
 	int			j;
 
-	i = 0;
-	while (i < game.map.height)
+	(void)img_pos;
+	i = -1;
+	while (++i < game.map.height)
 	{
-		j = 0;
-		while (j < game.map.width && game.flag == 0)
+		j = -1;
+		while (++j < game.map.width && game.flag == 0)
 		{
 			if (map[i][j] == 'P' && map[i - 1][j] != '1'
-				&& map[i - 1][j] != 'E')
+                && map[i - 1][j] != 'E')
 			{
 				if (map[i - 1][j] == 'C')
 					game.collect += 1;
@@ -123,12 +136,10 @@ t_game	up_move(t_game game, char **map, t_vector img_pos)
 				game.flag = 1;
 				map[i - 1][j] = 'P';
 			}
-			j++;
 		}
-		i++;
 	}
 	game = check_door(game);
-	draw_map(game, map, game.player_up.reference, img_pos);
+	game = is_game_over(game, map, game.player_up.reference, img_pos);
 	return (game);
 }
 

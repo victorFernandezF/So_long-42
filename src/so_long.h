@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/10 12:09:46 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:00:28 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,6 +151,10 @@ t_game		ft_destroy_map(t_game game, char **map);
 t_game		check_door(t_game game);
 t_game		check_everything(t_game game, int i, int j, char **map);
 void		finish_game(t_game game);
+t_game		last_map(t_game game, char **map, void *player, t_vector img_pos);
+t_game		is_game_over(t_game game, char **map, void *player, t_vector img_pos);
+
+
 
 
 #endif
