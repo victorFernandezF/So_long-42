@@ -6,7 +6,7 @@
 #    By: victofer <victofer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 10:38:55 by victofer          #+#    #+#              #
-#    Updated: 2023/01/09 13:38:16 by victofer         ###   ########.fr        #
+#    Updated: 2023/01/11 10:50:04 by victofer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC			:=  testing_stuff/leaks.c \
 				window/window.c \
 				window/key_management.c \
 				moves/left_right_moves.c \
+				moves/check_moves.c \
 				errors/errors.c  \
 				src/main.c
 
