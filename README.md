@@ -5,7 +5,7 @@
 > Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
 
 ### Imagen
-<img src="./preview_img/screenshoot.png" width=300px>
+<img src="./preview_img/preview.gif" width=300px>
 
 ### INFO
 
