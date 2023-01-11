@@ -1,13 +1,11 @@
 
 # :video_game: SO_LONG [:es:]
 
-### clone 
-~~~~~
-git clone https://github.com/victorFernandezF/cursus_tmp.git
-~~~~~
-
 #### Resumen
 > Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
+
+### Imagen
+<img src="./preview_img/screenshoot.png" width=300px>
 
 ### INFO
 
@@ -17,10 +15,15 @@ git clone https://github.com/victorFernandezF/cursus_tmp.git
 |              |          Graphics         |
 
 ### ESTADO
-#### Starting
+#### in progress
 
 ![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive)
 <!-- ![result](https://img.shields.io/badge/RESULTADO-125%25-green) -->
+
+#### CLONAR REPOSITORIO
+~~~~~
+git clone https://github.com/victorFernandezF/cursus_tmp.git
+~~~~~
 
 <hr/>
 
@@ -28,6 +31,10 @@ git clone https://github.com/victorFernandezF/cursus_tmp.git
 
 #### Summary
 > This project is a small 2D game with minilibx. You'll learn about textures, sprites and tiles.
+
+### Imagen
+<img src="./preview_img/screenshoot.png" width=300px>
+
 
 ### INFO
 
@@ -41,3 +48,8 @@ git clone https://github.com/victorFernandezF/cursus_tmp.git
 
 <!-- ![result](https://img.shields.io/badge/RESULT-1250%25-green) -->
 ![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive)
+
+#### CLONE REPO
+~~~~~
+git clone https://github.com/victorFernandezF/cursus_tmp.git
+~~~~~
