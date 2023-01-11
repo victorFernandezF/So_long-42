@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/11 11:04:47 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/11 12:50:41 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,27 +26,23 @@
 #  define BUFFER_SIZE BUFSIZ
 # endif
 
-# ifndef ANIMATION_FRAMES
-#  define ANIMATION_FRAMES 10
-# endif
-
 // --------------- S T R U C T S -------------------
 
-/* vector with an x and y */
+// struct with an x and y used for positions
 typedef struct s_vector
 {
 	int	x;
 	int	y;
 }				t_vector;
 
-/* Windows stuff */
+// Window datas
 typedef struct s_window {
 	void		*reference;
 	t_vector	size;
 	char		*name;
 }				t_window;
 
-/* Images stuff */
+// Images datas
 typedef struct s_image {
 	void		*reference;
 	t_vector	size;
@@ -56,7 +52,7 @@ typedef struct s_image {
 	int			endian;
 }				t_image;
 
-/* Map stuff */
+// Map datas
 typedef struct s_map
 {
 	int		width;
@@ -68,6 +64,7 @@ typedef struct s_map
 	char	**map;
 }			t_map;
 
+// game datas
 typedef struct s_game
 {
 	char		*map_file;
@@ -90,12 +87,12 @@ typedef struct s_game
 	t_vector	wall_position;	
 }				t_game;
 
-// ------------ F U N C T I O N S ---------------------
+// ------------ F U N C T I O N S -------------------
 
 t_image	ft_new_sprite(void *mlx, char *path);
 int		key_hook(int keycode, t_game *game);
 
-	// GET NEXT LINE 
+	// GET NEXT LINE AND ITS UTILS
 char	*get_next_line(int fd);
 char	*ft_read(int fd, char *str);
 char	*get_line_gnl(char *str);
@@ -114,7 +111,7 @@ void	ft_error_destroy(char *msg, t_game game);
 	//FREE STUFF
 void	ft_free_map(t_map map_list);
 
-	// MAP CHECKER 
+	// MAP CHECKER (BEFORE STARTING THE GAME)
 int		check_args(int n, char *str);
 int		check_map_number_items(t_map map_list);
 t_map	check_map_items(t_map map_list);
@@ -130,31 +127,29 @@ int		count_map_lines(char *file);
 char	**malloc_cols(char *file);
 char	**map_reader(char *file, t_map map_list);
 
-	// GAME
+	// GAME START AND MAP DRAWING
 t_map	map_list_init(void);
 t_game	game_start(t_game game);
 t_game	load_images(t_game game);
 t_game	open_window(t_game game);
 t_game	draw_map(t_game game, char **map, void *player, t_vector img_pos);
 
-	//MOVES
+	// MOVES
 t_game	right_move(t_game game, char **map, t_vector img_pos);
 t_game	left_move(t_game game, char **map, t_vector img_pos);
 t_game	up_move(t_game game, char **map, t_vector img_pos);
 t_game	down_move(t_game game, char **map, t_vector img_pos);
-
-	// TESTING
-void	show_leaks(void);
-t_game	destroy_aux(char map, t_game game);
-t_game	ft_destroy_map(t_game game, char **map);
-t_game	check_door(t_game game);
-t_game	check_everything(t_game game, int i, int j, char **map);
-void	finish_game(t_game game);
 t_game	last_map(t_game game, char **map, void *player, t_vector img_pos);
+
+	// MOVES CHECKER 
+t_game	check_door(t_game game);
 t_game	is_game_over(t_game game, char **map, void *player, t_vector img_pos);
 int		chek_open_door(int i, int j, int dir, t_game game);
 int		check_player_wall(char c1, char c2);
-int		check_player_wall_down(char c1, char c2);
 
+	// GAME FINISHER
+void	finish_game(t_game game);
 
+	// SHOW LEAKY LEAKY (DELETE THIS BEFORE PRESSENTING)
+void	show_leaks(void);
 #endif
