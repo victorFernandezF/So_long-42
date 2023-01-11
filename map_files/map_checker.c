@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 13:39:03 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/05 13:36:51 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/11 19:04:19 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,18 +62,18 @@ int	check_ber_file(char *str)
  *		At Least 1 Exit.
  *		No other chars than (1, 0, E, C, P).
 */
-int	check_map_number_items(t_map map_list)
+int	check_map_number_items(t_map map)
 {
-	if (map_list.bad_char == 1)
-		ft_error_free("Map only allowed Chars: 1, 0 , C, P, E", map_list);
-	if (map_list.objects <= 0)
-		ft_error_free("It must be at least one object (C)", map_list);
-	if (map_list.player <= 0)
-		ft_error_free("It must be at least one player (P)", map_list);
-	if (map_list.exit <= 0)
-		ft_error_free("It must be at least one exit (E)", map_list);
-	if (map_list.player > 1)
-		ft_error_free("No more than one player (P).", map_list);
+	if (map.bad_char == 1)
+		ft_error_free("Map only allowed Chars: 1, 0 , C, P, E", map);
+	if (map.objects <= 0)
+		ft_error_free("It must be at least one object (C)", map);
+	if (map.player <= 0)
+		ft_error_free("It must be at least one player (P)", map);
+	if (map.exit <= 0)
+		ft_error_free("It must be at least one exit (E)", map);
+	if (map.player > 1)
+		ft_error_free("No more than one player (P) allowed in the map.", map);
 	return (0);
 }
 
