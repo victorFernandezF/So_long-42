@@ -5,7 +5,7 @@
 > Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
 
 ### Imagen
-<!-- <img src="./preview_img/preview.gif" width=500px> -->
+<img src="./preview_img/preview.gif" width=500px>
 
 ### INFO
 
@@ -33,7 +33,7 @@ git clone https://github.com/victorFernandezF/cursus_tmp.git
 > This project is a small 2D game with minilibx. You'll learn about textures, sprites and tiles.
 
 ### Imagen
-<!-- <img src="./preview_img/preview.gif" width=500px> -->
+<img src="./preview_img/preview.gif" width=500px>
 
 
 ### INFO
