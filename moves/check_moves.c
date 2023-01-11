@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 10:50:22 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/11 11:27:08 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:56:44 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ t_game	check_door(t_game game)
 
 int	check_player_wall(char c1, char c2)
 {
-	//printf("%c", c2);
 	if (c1 == 'P' && c2 != '1' && c2 != 'E')
 		return (1);
 	return (0);
