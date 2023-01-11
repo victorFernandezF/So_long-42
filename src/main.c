@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:16:51 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/10 12:34:06 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/11 18:55:25 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ t_game	game_start(t_game game)
 	game.win.size.x = game.map.width * 64;
 	game.win.size.y = game.map.height * 64;
 	game = open_window(game);
-	//printf("%s\n", game.og_map[1]);
 	return (game);
 }
 
@@ -36,7 +35,7 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
-	//atexit(show_leaks);
+	atexit(show_leaks);
 	if (!check_args(argc, argv[1]))
 		return (0);
 	game.map_file = argv[1];

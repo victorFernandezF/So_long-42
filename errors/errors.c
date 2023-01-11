@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 19:07:43 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/10 11:29:19 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/11 18:27:56 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void	ft_error(char *msg)
 void	finish_game(t_game game)
 {
 	mlx_destroy_window(game.mlx, game.win.reference);
- 	free(game.wall.reference);
 	free(game.player_left.reference);
 	free(game.player_down.reference);
 	free(game.player_right.reference);
@@ -63,6 +62,8 @@ void	finish_game(t_game game)
 	free(game.floor.reference);
 	free(game.door.reference);
 	free(game.door_open.reference);
+	free(game.wall.reference);
 	mlx_destroy(game.mlx);
+	ft_free_map(game.map);
 	exit(0);
 }
