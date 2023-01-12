@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:51:31 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 12:21:59 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:40:46 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	end_game(t_game *game)
 {
-	ft_printf("OH. You close the game. See you soon.\n");
+	ft_printf(BLUE":( YOU CLOSE THE GAME. SEE YOU SOON.\n");
 	game_over(*game);
 	return (0);
 }
@@ -29,7 +29,7 @@ int	key_management(int keycode, t_game *game)
 	if (keycode == 53)
 		end_game(game);
 	game->moves += 1;
-	ft_printf("Moves: %i\n", game->moves);
+	ft_printf(YELLOW"Moves: %i\n", game->moves);
 	if (keycode == 2 || keycode == 124)
 		*game = right_move(*game, game->map.map, img_position);
 	if (keycode == 0 || keycode == 123)

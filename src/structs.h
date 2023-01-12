@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:26:18 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 11:27:26 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:40:28 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,29 @@
 # define STRUCTS_H
 # include "./so_long.h"
 
-// --------------- S T R U C T S -------------------
+// -------------- C O L O R S ------------------
+# define RED  "\x1B[31m"
+# define GREEN  "\x1B[32m"
+# define YELLOW  "\x1B[33m"
+# define BLUE  "\x1B[34m"
 
-// struct with an x and y used for positions
+// ------------- S T R U C T S -----------------
+
+// struct with an 'x' and 'y' used for positions
 typedef struct s_vector
 {
 	int	x;
 	int	y;
 }				t_vector;
 
-// Window datas
+// Struct with the WINDOW datas
 typedef struct s_window {
 	void		*reference;
 	t_vector	size;
 	char		*name;
 }				t_window;
 
-// Images datas
+// Struct with the IMAGE datas
 typedef struct s_image {
 	void		*reference;
 	t_vector	size;
@@ -40,7 +46,7 @@ typedef struct s_image {
 	int			endian;
 }				t_image;
 
-// Map datas
+// Struct with the MAP datas
 typedef struct s_map
 {
 	int		width;
@@ -52,7 +58,7 @@ typedef struct s_map
 	char	**map;
 }			t_map;
 
-// game datas
+// Struct with the GAME datas
 typedef struct s_game
 {
 	char		*map_file;
