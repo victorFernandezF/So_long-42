@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:26:18 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 12:40:28 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:56:22 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,25 @@
 # include "./so_long.h"
 
 // -------------- C O L O R S ------------------
+
 # define RED  "\x1B[31m"
 # define GREEN  "\x1B[32m"
 # define YELLOW  "\x1B[33m"
 # define BLUE  "\x1B[34m"
+
+// ---------------- K E Y S --------------------
+enum e_keys
+{
+	KA = 0,
+	KS = 1,
+	KD = 2,
+	KW = 13,
+	KLEFT = 123,
+	KRIGHT = 124,
+	KDOWN = 125,
+	KUP = 126,
+	KESC = 53
+};
 
 // ------------- S T R U C T S -----------------
 
