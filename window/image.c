@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 11:08:26 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/11 12:56:04 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 18:45:01 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ t_game	load_images(t_game game)
 	game.floor = ft_new_sprite(game.mlx, "sprites/floor.xpm");
 	game.door = ft_new_sprite(game.mlx, "sprites/door.xpm");
 	game.door_open = ft_new_sprite(game.mlx, "sprites/door_open.xpm");
-	game.object = ft_new_sprite(game.mlx, "sprites/object.xpm");
-	game.player_right = ft_new_sprite(game.mlx, "sprites/tanky_right.xpm");
-	game.player_left = ft_new_sprite(game.mlx, "sprites/tanky_left.xpm");
-	game.player_up = ft_new_sprite(game.mlx, "sprites/tanky_up.xpm");
-	game.player_down = ft_new_sprite(game.mlx, "sprites/tanky_down.xpm");
+	game.object = ft_new_sprite(game.mlx, "sprites/pokeball.xpm");
+	game.player_right = ft_new_sprite(game.mlx, "sprites/car_right.xpm");
+	game.player_left = ft_new_sprite(game.mlx, "sprites/car_left.xpm");
+	game.player_up = ft_new_sprite(game.mlx, "sprites/car_up.xpm");
+	game.player_down = ft_new_sprite(game.mlx, "sprites/car_down.xpm");
 	return (game);
 }
 
