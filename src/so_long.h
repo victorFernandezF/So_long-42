@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 11:09:13 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 11:29:05 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,79 +14,15 @@
 # define SO_LONG_H
 # include "../mlx/mlx.h"
 # include "../libft/libft.h"
-# include <fcntl.h>
-# include <stdarg.h>
+# include "./structs.h"
 # include <stdlib.h>
+# include <fcntl.h>
 # include <unistd.h>
-# include <limits.h>
-# include <signal.h>
 
 // -------------- M A C R O S --------------------
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE BUFSIZ
 # endif
-
-// --------------- S T R U C T S -------------------
-
-// struct with an x and y used for positions
-typedef struct s_vector
-{
-	int	x;
-	int	y;
-}				t_vector;
-
-// Window datas
-typedef struct s_window {
-	void		*reference;
-	t_vector	size;
-	char		*name;
-}				t_window;
-
-// Images datas
-typedef struct s_image {
-	void		*reference;
-	t_vector	size;
-	char		*pixels;
-	int			bits_per_pixel;
-	int			line_size;
-	int			endian;
-}				t_image;
-
-// Map datas
-typedef struct s_map
-{
-	int		width;
-	int		height;
-	int		player;
-	int		objects;
-	int		exit;
-	int		bad_char;
-	char	**map;
-}			t_map;
-
-// game datas
-typedef struct s_game
-{
-	char		*map_file;
-	void		*mlx;
-	int			collect;
-	int			moves;
-	int			flag;
-	int			is_finish;
-	char		**og_map;
-	t_map		map;
-	t_window	win;
-	t_image		wall;
-	t_image		floor;
-	t_image		door;
-	t_image		door_open;
-	t_image		object;
-	t_image		player_right;
-	t_image		player_down;
-	t_image		player_up;
-	t_image		player_left;
-	t_vector	wall_position;	
-}				t_game;
 
 // ------------ F U N C T I O N S -------------------
 
