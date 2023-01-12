@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:16:51 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 10:59:26 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 11:09:45 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_game	game_start(t_game game)
 	game.mlx = mlx_init();
 	game.collect = 0;
 	game.is_finish = 0;
+	game.moves = 0;
 	game.map.height = count_map_lines(game.map_file);
 	game.map.map = map_reader(game.map_file, game.map);
 	game.og_map = map_reader(game.map_file, game.map);

@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 10:58:27 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 11:09:13 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ typedef struct s_game
 	char		*map_file;
 	void		*mlx;
 	int			collect;
+	int			moves;
 	int			flag;
 	int			is_finish;
 	char		**og_map;
