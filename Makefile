@@ -6,7 +6,7 @@
 #    By: victofer <victofer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 10:38:55 by victofer          #+#    #+#              #
-#    Updated: 2023/01/11 12:59:38 by victofer         ###   ########.fr        #
+#    Updated: 2023/01/12 12:17:47 by victofer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC			:=  testing_stuff/leaks.c \
 				map_files/map_checker.c \
 				map_files/map_lines_checker.c \
 				map_files/init.c \
+				map_files/draw_map.c \
 				get_next_line/get_next_line.c \
 				get_next_line/get_next_line_utils.c \
 				window/image.c  \
