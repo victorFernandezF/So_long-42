@@ -6,11 +6,18 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:51:31 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/10 12:06:40 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 10:57:34 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/so_long.h"
+
+int	end_game(t_game *game)
+{
+	ft_printf("BYE\n");
+	finish_game(*game);
+	return (0);
+}
 
 int	key_hook(int keycode, t_game *game)
 {

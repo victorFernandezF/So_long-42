@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:16:51 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/11 19:16:09 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 10:59:26 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	main(int argc, char **argv)
 	game.map_file = argv[1];
 	game = game_start(game);
 	mlx_key_hook(game.win.reference, key_hook, &game);
+	mlx_hook(game.win.reference, 17, 1L << 2, end_game, &game);
 	mlx_loop(game.mlx);
 	return (0);
 }

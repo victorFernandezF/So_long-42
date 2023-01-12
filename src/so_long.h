@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/11 12:50:41 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 10:58:27 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,7 @@ int		chek_open_door(int i, int j, int dir, t_game game);
 int		check_player_wall(char c1, char c2);
 
 	// GAME FINISHER
+int		end_game(t_game *game);
 void	finish_game(t_game game);
 
 	// SHOW LEAKY LEAKY (DELETE THIS BEFORE PRESSENTING)
