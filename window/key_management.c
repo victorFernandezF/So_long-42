@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:51:31 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 11:18:14 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:02:48 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	end_game(t_game *game)
 {
-	ft_printf("BYE\n");
+	ft_printf("OH. You close the game. See you soon.\n");
 	finish_game(*game);
 	return (0);
 }
@@ -28,7 +28,7 @@ int	key_hook(int keycode, t_game *game)
 	game->flag = 0;
 	if (keycode == 53)
 	{
-		finish_game(*game);
+		end_game(game);
 	}
 	game->moves += 1;
 	ft_printf("Moves: %i\n", game->moves);
