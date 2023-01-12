@@ -6,13 +6,13 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:16:33 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 12:17:15 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:19:08 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/so_long.h"
 
-static t_game	draw_aux(char map, t_game game, void *player, t_vector img_pos)
+t_game	draw_aux(char map, t_game game, void *player, t_vector img_pos)
 {
 	if (map == '1')
 		mlx_put_image_to_window(game.mlx, game.win.reference,
