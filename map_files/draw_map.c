@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:16:33 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 12:19:08 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:22:35 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,6 @@ t_game	last_map(t_game game, char **map, void *player, t_vector img_pos)
 		i++;
 	}
 	ft_printf("CONGRATULATIONS. YOU WON\n");
-	finish_game(game);
+	game_over(game);
 	return (game);
 }

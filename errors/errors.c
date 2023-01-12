@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 19:07:43 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/11 19:29:44 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:21:53 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_error(char *msg)
 	exit (-1);
 }
 
-void	finish_game(t_game game)
+void	game_over(t_game game)
 {
 	mlx_destroy_window(game.mlx, game.win.reference);
 	free(game.player_left.reference);
