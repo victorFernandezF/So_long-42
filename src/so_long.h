@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 11:32:23 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:10:43 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@
 # endif
 
 // ------------ F U N C T I O N S -------------------
-
-t_image	ft_new_sprite(void *mlx, char *path);
-int		key_hook(int keycode, t_game *game);
 
 	// GET NEXT LINE AND ITS UTILS
 char	*get_next_line(int fd);
@@ -63,12 +60,18 @@ int		count_map_lines(char *file);
 char	**malloc_cols(char *file);
 char	**map_reader(char *file, t_map map_list);
 
+	// IMAGES
+t_game	load_images(t_game game);
+t_image	ft_new_sprite(void *mlx, char *path);
+
 	// GAME START AND MAP DRAWING
 t_map	map_list_init(void);
 t_game	game_start(t_game game);
-t_game	load_images(t_game game);
 t_game	open_window(t_game game);
 t_game	draw_map(t_game game, char **map, void *player, t_vector img_pos);
+
+	//KEY MANAGEMENT
+int		key_management(int keycode, t_game *game);
 
 	// MOVES
 t_game	right_move(t_game game, char **map, t_vector img_pos);
