@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 11:08:26 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 11:28:44 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:08:10 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,13 @@ t_image	get_game_objects(t_game game)
 		max = w;
 	else
 		max = h;
-	if (max < 10)
+	if (max <= 5)
 		return (game.pokeball);
-	if (max >= 10 && max <= 15)
+	if (max > 5 && max <= 10)
 		return (game.superball);
-	if (max > 15)
+	if (max > 10 && max <= 20)
 		return (game.ultraball);
+	if (max > 20)
+		return (game.masterball);
 	return (game.masterball);
 }
