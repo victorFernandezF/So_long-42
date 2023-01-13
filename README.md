@@ -22,7 +22,7 @@
 
 #### CLONAR REPOSITORIO
 ~~~~~
-git clone https://github.com/victorFernandezF/cursus_tmp.git
+git clone https://github.com/victorFernandezF/So_long-42.git
 ~~~~~
 
 <hr/>
@@ -51,5 +51,5 @@ git clone https://github.com/victorFernandezF/cursus_tmp.git
 
 #### CLONE REPO
 ~~~~~
-git clone https://github.com/victorFernandezF/cursus_tmp.git
+git clone https://github.com/victorFernandezF/So_long-42.git
 ~~~~~
