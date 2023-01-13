@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:16:51 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 13:32:32 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:48:02 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_game	game_start(t_game game)
 	game.map = check_map(game.map);
 	check_map_number_items(game.map);
 	game.win.size.x = game.map.width * 64;
-	game.win.size.y = game.map.height * 64;
+	game.win.size.y = (game.map.height * 64) + 42;
 	game = open_window(game);
 	return (game);
 }

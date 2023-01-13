@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:51:31 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 13:29:19 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:00:39 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ int	key_management(int keycode, t_game *game)
 	if (keycode == KESC)
 		end_game(game);
 	game->moves += 1;
+/* 	mlx_string_put(game->mlx, game->win.reference, 10, game->win.size.y - 10,
+		0x000000, ft_itoa(game->moves - 1));
+	mlx_string_put(game->mlx, game->win.reference, 10, game->win.size.y - 10,
+		0xffffff, ft_itoa(game->moves)); */
 	ft_printf(YELLOW"Moves: %i\n", game->moves);
 	if (keycode == KD || keycode == KRIGHT)
 		*game = right_move(*game, game->map.map, img_position);
