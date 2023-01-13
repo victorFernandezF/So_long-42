@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 19:07:43 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 12:32:58 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 11:22:43 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,10 @@ void	game_over(t_game game)
 	free(game.door.reference);
 	free(game.door_open.reference);
 	free(game.wall.reference);
+	free(game.pokeball.reference);
+	free(game.superball.reference);
+	free(game.ultraball.reference);
+	free(game.masterball.reference);
 	mlx_destroy(game.mlx);
 	ft_free_map(game.map);
 	exit(0);

@@ -6,14 +6,15 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:16:33 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 18:22:50 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 11:28:39 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/so_long.h"
 
 t_game	draw_aux(char map, t_game game, void *player, t_vector img_pos)
-{
+{	
+	game.object = get_game_objects(game);
 	if (map == '1')
 		mlx_put_image_to_window(game.mlx, game.win.reference,
 			game.wall.reference, img_pos.x, img_pos.y);
@@ -78,3 +79,4 @@ t_game	last_map(t_game game, char **map, void *player, t_vector img_pos)
 	game_over(game);
 	return (game);
 }
+

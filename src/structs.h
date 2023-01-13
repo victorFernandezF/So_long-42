@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:26:18 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 18:20:05 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 10:58:19 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,10 @@ typedef struct s_game
 	t_image		door;
 	t_image		door_open;
 	t_image		object;
+	t_image		pokeball;
+	t_image		superball;
+	t_image		ultraball;
+	t_image		masterball;
 	t_image		player_right;
 	t_image		player_down;
 	t_image		player_up;

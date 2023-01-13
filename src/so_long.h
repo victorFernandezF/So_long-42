@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/12 12:21:40 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 11:11:35 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ int		check_player_wall(char c1, char c2);
 	// GAME FINISHER
 int		end_game(t_game *game);
 void	game_over(t_game game);
+
+t_image	get_game_objects(t_game game);
 
 	// SHOW LEAKY LEAKY (DELETE THIS BEFORE PRESSENTING)
 void	show_leaks(void);
