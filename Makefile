@@ -6,7 +6,7 @@
 #    By: victofer <victofer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 10:38:55 by victofer          #+#    #+#              #
-#    Updated: 2023/01/13 11:00:06 by victofer         ###   ########.fr        #
+#    Updated: 2023/01/13 11:56:34 by victofer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,12 +52,15 @@ all: nice_text makelibs $(NAME)
 
 nice_text:
 	@echo "$(Y)"
-	@echo " SSSSS   11111           LL       OOOOO  NN   NN   GGGG "
-	@echo "SS      10   01          LL      OO   OO NNN  NN  GG  GG "
-	@echo " SSSSS  10   O1          LL      OO   OO NN N NN GG  "
-	@echo "     SS 10   01          LL      OO   OO NN  NNN GG   GG"
-	@echo " SSSSS   11111  _______  LLLLLLL  OOOO0  NN   NN  GGGGGG "
-	@echo "               |_______|                         victofer"
+	@echo " SSSSS  1111111             LL      1111111 NN   NN   GGGG "
+	@echo "SS      10   01             LL      1O   O1 NNN  NN  GG  GG "
+	@echo " SSSSS  10   O1             LL      1O   O1 NN N NN GG  "
+	@echo "     SS 10   01             LL      1O   O1 NN  NNN GG   GG"
+	@echo " SSSSS  1111111 __________  LLLLLLL 1111111  NN   NN  GGGGGG "
+	@echo "               |          |"
+	@echo "               | victofer |"
+	@echo "               |__________|"
+	
 	@echo "$(E)"
 
 $(OBJ): $(SRC)
