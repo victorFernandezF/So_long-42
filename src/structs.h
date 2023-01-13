@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:26:18 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 10:58:19 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 11:36:36 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define GREEN  "\x1B[32m"
 # define YELLOW  "\x1B[33m"
 # define BLUE  "\x1B[34m"
+# define WHITE  "\x1B[37m"
 
 // ---------------- K E Y S --------------------
 enum e_keys
