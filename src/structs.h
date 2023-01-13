@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:26:18 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 13:29:01 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 18:42:54 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ typedef struct s_map
 	int		player;
 	int		objects;
 	int		exit;
+	int		enemy;
 	int		bad_char;
 	char	**map;
 }			t_map;
@@ -92,6 +93,7 @@ typedef struct s_game
 	t_image		door;
 	t_image		door_open;
 	t_image		object;
+	t_image		enemy;
 	t_image		pokeball;
 	t_image		superball;
 	t_image		ultraball;

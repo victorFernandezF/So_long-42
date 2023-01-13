@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 18:30:46 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 18:43:47 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ t_game	draw_aux(char map, t_game game, void *player, t_vector img_pos);
 
 	//KEY MANAGEMENT
 int		key_management(int keycode, t_game *game);
-int		key_management_bonus(int keycode, t_game *game);
 
 	// MOVES
 t_game	right_move(t_game game, char **map, t_vector img_pos);
@@ -94,6 +93,14 @@ void	game_over(t_game game);
 
 t_image	get_game_objects(t_game game);
 
+	// BONUS
+int		key_management_bonus(int keycode, t_game *game);
+t_map	check_map_items_bonus(t_map map_list);
+
+
 	// SHOW LEAKY LEAKY (DELETE THIS BEFORE PRESSENTING)
 void	show_leaks(void);
+
+
+
 #endif
