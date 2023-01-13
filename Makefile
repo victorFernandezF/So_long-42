@@ -6,13 +6,14 @@
 #    By: victofer <victofer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 10:38:55 by victofer          #+#    #+#              #
-#    Updated: 2023/01/13 11:56:34 by victofer         ###   ########.fr        #
+#    Updated: 2023/01/13 18:25:15 by victofer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC			:= gcc
 CFLAGS		:= -Wall -Wextra -Werror
 NAME		:= so_long.out
+NAMEBONUS	:= so_long_bonus.out
 
 LIBFT_PATH	:= ./libft/ 
 LIBFT_LIB	:= $(LIBFT_PATH)libft.a
@@ -36,8 +37,24 @@ SRC			:=  testing_stuff/leaks.c \
 				errors/errors.c  \
 				src/main.c
 
+SRC_BONUS	:=  testing_stuff/leaks.c \
+				bonus/* \
+				map_files/map_reader.c \
+				map_files/map_checker.c \
+				map_files/map_lines_checker.c \
+				map_files/init.c \
+				map_files/draw_map.c \
+				get_next_line/get_next_line.c \
+				get_next_line/get_next_line_utils.c \
+				window/image.c  \
+				window/window.c \
+				window/key_management.c \
+				moves/moves.c \
+				moves/check_moves.c \
+				errors/errors.c  \
 
 OBJECTS		:= $(SRC:.c=.o)
+OBJECTS_B	:= $(SRC_BONUS:.c=.o)
 
 #COLORS
 G = \033[0;32m
@@ -50,17 +67,18 @@ E = \033[0m
 
 all: nice_text makelibs $(NAME)
 
+bonus: makelibs $(NAMEBONUS)
+
 nice_text:
 	@echo "$(Y)"
 	@echo " SSSSS  1111111             LL      1111111 NN   NN   GGGG "
 	@echo "SS      10   01             LL      1O   O1 NNN  NN  GG  GG "
 	@echo " SSSSS  10   O1             LL      1O   O1 NN N NN GG  "
 	@echo "     SS 10   01             LL      1O   O1 NN  NNN GG   GG"
-	@echo " SSSSS  1111111 __________  LLLLLLL 1111111  NN   NN  GGGGGG "
+	@echo " SSSSS  1111111 __________  LLLLLLL 1111111 NN   NN  GGGGGG "
 	@echo "               |          |"
 	@echo "               | victofer |"
 	@echo "               |__________|"
-	
 	@echo "$(E)"
 
 $(OBJ): $(SRC)
@@ -83,6 +101,16 @@ $(NAME): $(OBJECTS)
 	@echo "   $(Y)|$(G)  So_long Created 😁  $(Y) |"
 	@echo "   $(Y)0-----------------------0"
 	@echo "$(E)"
+
+$(NAMEBONUS): $(OBJECTS_B)
+	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJECTS_B) $(MLX_LIB) libft/libft.a -o so_long_bonus
+	@echo "   $(Y)0-----------------------0"
+	@echo "   $(Y)|$(G)  So_long Created 😁  $(Y) |"
+	@echo "   $(Y)0-----------------------0"
+	@echo "$(E)"
+
+
+
 clean:
 	@make -C $(MLX_PATH) clean
 	@make -C $(LIBFT_PATH) clean
@@ -98,6 +126,7 @@ fclean: clean
 	@make -C $(LIBFT_PATH) fclean
 	@rm -rf $(NAME)
 	@rm -rf so_long
+	@rm -rf so_long_bonus
 	@rm -rf a.out
 
 re: fclean all

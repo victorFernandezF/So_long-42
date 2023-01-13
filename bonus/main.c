@@ -6,11 +6,11 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:16:51 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 18:32:12 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 18:31:36 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./so_long.h"
+#include "../src/so_long.h"
 
 t_game	game_start(t_game game)
 {
@@ -27,7 +27,7 @@ t_game	game_start(t_game game)
 	game.map = check_map(game.map);
 	check_map_number_items(game.map);
 	game.win.size.x = game.map.width * 64;
-	game.win.size.y = game.map.height * 64;
+	game.win.size.y = (game.map.height * 64) + 42;
 	game = open_window(game);
 	return (game);
 }
@@ -37,11 +37,11 @@ int	main(int argc, char **argv)
 	t_game	game;
 
 	//atexit(show_leaks);
-	if (!check_args(argc, argv[1]))
+ 	if (!check_args(argc, argv[1]))
 		return (0);
 	game.map_file = argv[1];
 	game = game_start(game);
-	mlx_key_hook(game.win.reference, key_management, &game);
+	mlx_key_hook(game.win.reference, key_management_bonus, &game);
 	mlx_hook(game.win.reference, 17, 1L << 2, end_game, &game);
 	mlx_loop(game.mlx);
 	return (0);
