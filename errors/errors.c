@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 19:07:43 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 11:37:40 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 12:51:47 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_free_map(t_map map_list)
 	while (map_list.map[i])
 	{
 		free(map_list.map[i]);
+		map_list.map[i] = NULL;
 		i++;
 	}
 	free(map_list.map);
