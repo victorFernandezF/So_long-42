@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 18:29:27 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 18:30:20 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 19:58:39 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	key_management_bonus(int keycode, t_game *game)
 	mlx_string_put(game->mlx, game->win.reference, 10, game->win.size.y - 10,
 		0xffffff, ft_itoa(game->moves));
 	if (keycode == KD || keycode == KRIGHT)
-		*game = right_move(*game, game->map.map, img_position);
+		*game = right_move_bonus(*game, game->map.map, img_position, -1);
 	if (keycode == KA || keycode == KLEFT)
-		*game = left_move(*game, game->map.map, img_position);
+		*game = left_move_bonus(*game, game->map.map, img_position, -1);
 	if (keycode == KW || keycode == KUP)
-		*game = up_move(*game, game->map.map, img_position);
+		*game = up_move_bonus(*game, game->map.map, img_position, -1);
 	if (keycode == KS || keycode == KDOWN)
-		*game = down_move(*game, game->map.map, img_position);
+		*game = down_move_bonus(*game, game->map.map, img_position, -1);
 	return (0);
 }
  

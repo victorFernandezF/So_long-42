@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 10:18:16 by victofer          #+#    #+#             */
-/*   Updated: 2022/12/14 11:55:17 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 19:27:29 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_map	map_list_init(void)
 	t_map	map_list;
 
 	map_list.exit = 0;
+	map_list.enemy = 0;
 	map_list.exit = 0;
 	map_list.objects = 0;
 	map_list.player = 0;

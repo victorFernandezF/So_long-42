@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 11:08:26 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 13:08:10 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 18:50:03 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_game	load_images(t_game game)
 	game.player_left = ft_new_sprite(game.mlx, "sprites/car_left.xpm");
 	game.player_up = ft_new_sprite(game.mlx, "sprites/car_up.xpm");
 	game.player_down = ft_new_sprite(game.mlx, "sprites/car_down.xpm");
+	game.enemy = ft_new_sprite(game.mlx, "sprites/enemy.xpm");
 	game.pokeball = ft_new_sprite(game.mlx, "sprites/pokeball.xpm");
 	game.superball = ft_new_sprite(game.mlx, "sprites/superball.xpm");
 	game.ultraball = ft_new_sprite(game.mlx, "sprites/ultraball.xpm");

@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 18:43:47 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 19:58:23 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,24 @@ void	game_over(t_game game);
 t_image	get_game_objects(t_game game);
 
 	// BONUS
+t_game	game_start_bonus(t_game game);
 int		key_management_bonus(int keycode, t_game *game);
-t_map	check_map_items_bonus(t_map map_list);
+t_map	check_map_items_bonus(t_map map_list, int i);
+t_map	check_map_bonus(t_map map_list);
+t_game	draw_map_bonus(t_game game, char **map, void *player, t_vector img_pos);
+t_game	draw_aux_bonus(char map, t_game game, void *player, t_vector img_pos);
+t_game	open_window_bonus(t_game game);
+t_game	last_map_bonus(t_game game, char **map, void *player, t_vector img_pos);
+int		chek_enemy(int i, int j, int dir, t_game game);
+int		end_game_bonus(t_game *game);
 
+
+t_game	right_move_bonus(t_game game, char **map, t_vector pos, int i);
+t_game	left_move_bonus(t_game game, char **map, t_vector pos, int i);
+t_game	up_move_bonus(t_game game, char **map, t_vector img_pos, int i);
+t_game	down_move_bonus(t_game game, char **map, t_vector img_pos, int i);
+t_game	is_game_over_b(t_game game, char **map, void *player, t_vector img_pos);
+int		check_player_wall_bonus(char c1, char c2);
 
 	// SHOW LEAKY LEAKY (DELETE THIS BEFORE PRESSENTING)
 void	show_leaks(void);
