@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:51:31 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 11:35:51 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:29:19 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	end_game(t_game *game)
 {
-	ft_printf(BLUE":( YOU CLOSE THE GAME. SEE YOU SOON.\n"WHITE);
+	ft_printf(MAG":( YOU CLOSE THE GAME. SEE YOU SOON.\n"WHITE);
 	game_over(*game);
 	return (0);
 }

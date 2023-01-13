@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 19:07:43 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 12:51:47 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:31:56 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // Print a message, free the map array and exit the program
 void	ft_error_free(char *msg, t_map map_list)
 {
-	ft_printf(RED"ERROR:\n%s"WHITE, msg);
+	ft_printf(RED"ERROR:\n%s\n"WHITE, msg);
 	ft_free_map(map_list);
 	exit (-1);
 }
@@ -37,7 +37,7 @@ void	ft_free_map(t_map map_list)
 
 void	ft_error(char *msg)
 {
-	ft_printf(RED"ERROR:\n%s"WHITE, msg);
+	ft_printf(RED"ERROR:\n%s\n"WHITE, msg);
 	exit (-1);
 }
 
