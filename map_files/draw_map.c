@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:16:33 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 13:27:52 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:57:30 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,9 @@ t_game	last_map(t_game game, char **map, void *player, t_vector img_pos)
 		i++;
 	}
 	ft_printf(GREEN"CONGRATULATIONS. 🥇\n"WHITE);
-	ft_printf(GREEN"YOU WON IN %i MOVES \n"WHITE, game.moves);
+	ft_printf(GREEN"YOU WON IN %i MOVES. \n"WHITE, game.moves);
 	if (game.moves == 42)
-		ft_printf(YELLOW" 42 MOVES, NICE\n"WHITE, game.moves);
+		ft_printf(YELLOW" 42 MOVES. NICE\n"WHITE, game.moves);
 	game_over(game);
 	return (game);
 }

@@ -6,7 +6,7 @@
 #    By: victofer <victofer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 10:38:55 by victofer          #+#    #+#              #
-#    Updated: 2023/01/13 18:25:15 by victofer         ###   ########.fr        #
+#    Updated: 2023/01/14 11:38:26 by victofer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,9 +104,9 @@ $(NAME): $(OBJECTS)
 
 $(NAMEBONUS): $(OBJECTS_B)
 	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJECTS_B) $(MLX_LIB) libft/libft.a -o so_long_bonus
-	@echo "   $(Y)0-----------------------0"
-	@echo "   $(Y)|$(G)  So_long Created 😁  $(Y) |"
-	@echo "   $(Y)0-----------------------0"
+	@echo "$(Y)0-----------------------------0"
+	@echo "$(Y)|$(G)  So_long_bonus Created 😁  $(Y) |"
+	@echo "$(Y)0-----------------------------0"
 	@echo "$(E)"
 
 
