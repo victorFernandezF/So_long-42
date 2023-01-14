@@ -4,7 +4,7 @@
 #### Resumen
 > Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
 
-### Imagen
+### Preview Gift
 <img src="./preview_img/preview.gif" width=500px>  
 
 ### INFO
@@ -24,6 +24,11 @@
 ~~~~~
 git clone https://github.com/victorFernandezF/So_long-42.git
 ~~~~~
+
+### ALGUNAS IMÁGENES
+<img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Mandatory/map_1.png" width=150px>
+<img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Mandatory/map_2.png" width=150px height="88px">
+<img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Bonus/map_1.png" width=150px height="88px">
 
 <hr/>
 
@@ -53,3 +58,8 @@ git clone https://github.com/victorFernandezF/So_long-42.git
 ~~~~~
 git clone https://github.com/victorFernandezF/So_long-42.git
 ~~~~~
+
+### SOME IMAGES
+<img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Mandatory/map_1.png" width=150px>
+<img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Mandatory/map_2.png" width=150px height="88px">
+<img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Bonus/map_1.png" width=150px height="88px">
