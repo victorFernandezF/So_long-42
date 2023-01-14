@@ -60,5 +60,4 @@ git clone https://github.com/victorFernandezF/So_long-42.git
 
 ### SOME IMAGES
 <img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Mandatory/map_1.png" width=142px>
-<img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Mandatory/map_2.png" width=142px height="88px">
 <img href = "./preview_img/ScreenShots/Mandatory/map_1.png" src="./preview_img/ScreenShots/Bonus/map_1.png" width=142px height="88px">
