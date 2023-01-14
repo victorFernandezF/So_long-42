@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:28:53 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 19:58:23 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:28:34 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ t_game	draw_aux(char map, t_game game, void *player, t_vector img_pos);
 
 	//KEY MANAGEMENT
 int		key_management(int keycode, t_game *game);
+int		check_allowed_keys(int k);
 
 	// MOVES
 t_game	right_move(t_game game, char **map, t_vector img_pos);
@@ -104,8 +105,8 @@ t_game	open_window_bonus(t_game game);
 t_game	last_map_bonus(t_game game, char **map, void *player, t_vector img_pos);
 int		chek_enemy(int i, int j, int dir, t_game game);
 int		end_game_bonus(t_game *game);
-
-
+void	game_over_b(t_game game);
+void	put_string_moves(t_game g);
 t_game	right_move_bonus(t_game game, char **map, t_vector pos, int i);
 t_game	left_move_bonus(t_game game, char **map, t_vector pos, int i);
 t_game	up_move_bonus(t_game game, char **map, t_vector img_pos, int i);
