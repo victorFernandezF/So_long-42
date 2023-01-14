@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:16:51 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/14 11:41:05 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/14 13:46:23 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ t_game	game_start_bonus(t_game game)
 	game.is_finish = 0;
 	game.moves = 0;
 	game.map.height = count_map_lines(game.map_file);
+	if (game.map.height == 1)
+		ft_error("There are errors on the map file.");
 	game.map.map = map_reader(game.map_file, game.map);
 	game.og_map = map_reader(game.map_file, game.map);
 	game.map.width = (ft_strlen(game.map.map[0]) - 1);
