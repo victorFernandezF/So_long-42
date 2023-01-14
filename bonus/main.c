@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:16:51 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 19:01:32 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:01:13 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
-	//atexit(show_leaks);
+	atexit(show_leaks);
  	if (!check_args(argc, argv[1]))
 		return (0);
 	game.map_file = argv[1];

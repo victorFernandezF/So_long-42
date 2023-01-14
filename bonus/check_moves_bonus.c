@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 10:50:22 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 19:48:17 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:48:09 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,7 @@ t_game	is_game_over_b(t_game game, char **map, void *player, t_vector img_pos)
 
 int	end_game_bonus(t_game *game)
 {
-	ft_printf(MAG"YOU LOSE.\n"WHITE);
+	ft_printf(MAG"OH NO! YOU TOUCHED SNORLAX. YOU LOSE HAHA.\n"WHITE);
 	game_over(*game);
 	return (0);
 }
-

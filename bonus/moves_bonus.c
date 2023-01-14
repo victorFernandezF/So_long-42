@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:33:21 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 19:59:54 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:41:09 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ t_game	up_move_bonus(t_game game, char **map, t_vector pos, int i)
 		while (++j < game.map.width && game.flag == 0)
 		{
 			if (map[i][j] == 'P' && map[i - 1][j] != '1'
-					&& map[i - 1][j] != 'E' && map[i - 1][j] != 'F')
+					&& map[i - 1][j] != 'E')
 			{
 				if (map[i - 1][j] == 'C')
 					game.collect += 1;

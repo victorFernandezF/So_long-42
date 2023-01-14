@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 18:48:08 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/13 19:03:00 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:57:52 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ t_game	open_window_bonus(t_game game)
 	game.win.name = "so_long";
 	game.win.reference = mlx_new_window(game.mlx, game.win.size.x,
 			game.win.size.y, game.win.name);
+	mlx_string_put(game.mlx, game.win.reference, 10, game.win.size.y - 15,
+		0xffffff, "Moves: ");
 	game = load_images(game);
 	draw_map_bonus(game, map, game.player_right.reference, img_position);
 	return (game);
@@ -97,9 +99,9 @@ t_game	last_map_bonus(t_game game, char **map, void *player, t_vector img_pos)
 		i++;
 	}
 	ft_printf(GREEN"CONGRATULATIONS. 🥇\n"WHITE);
-	ft_printf(GREEN"YOU WON IN %i MOVES \n"WHITE, game.moves);
+	ft_printf(GREEN"YOU WON IN %i MOVES. \n"WHITE, game.moves);
 	if (game.moves == 42)
-		ft_printf(YELLOW" 42 MOVES, NICE\n"WHITE, game.moves);
+		ft_printf(YELLOW" 42 MOVES. NICE\n"WHITE, game.moves);
 	game_over(game);
 	return (game);
 }
