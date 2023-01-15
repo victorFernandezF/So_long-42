@@ -1,7 +1,7 @@
 
 # :video_game:  SO_LONG [:es:]
 
-#### Resumen
+#### Resumen 
 > Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
 
 ### Preview Gift
