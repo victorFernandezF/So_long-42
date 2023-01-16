@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   left_right_moves.c                                 :+:      :+:    :+:   */
+/*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:33:21 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/11 11:55:51 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:40:08 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,10 @@
 ** one step to the right. Thne move it 
 ** when 'D' or 'right arrow' is pressed.
 */
-t_game	right_move(t_game game, char **map, t_vector img_pos)
+t_game	right_move(t_game game, char **map, t_vector img_pos, int i)
 {
-	int			i;
 	int			j;
 
-	(void)img_pos;
-	i = -1;
 	while (++i < game.map.height)
 	{
 		j = -1;
@@ -37,6 +34,7 @@ t_game	right_move(t_game game, char **map, t_vector img_pos)
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i][j + 1] = 'P';
+				game = print_moves(game);
 			}
 		}
 	}
@@ -50,13 +48,10 @@ t_game	right_move(t_game game, char **map, t_vector img_pos)
 ** one step to the left. Thne move it 
 ** when 'A' or 'left arrow' is pressed.
 */
-t_game	left_move(t_game game, char **map, t_vector img_pos)
+t_game	left_move(t_game game, char **map, t_vector img_pos, int i)
 {
-	int			i;
 	int			j;
 
-	(void)img_pos;
-	i = -1;
 	while (++i < game.map.height)
 	{
 		j = -1;
@@ -70,6 +65,7 @@ t_game	left_move(t_game game, char **map, t_vector img_pos)
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i][j - 1] = 'P';
+				game = print_moves(game);
 			}
 		}
 	}
@@ -83,12 +79,10 @@ t_game	left_move(t_game game, char **map, t_vector img_pos)
 ** one step up. Thne move it 
 ** when 'W' or 'up arrow' is pressed.
 */
-t_game	up_move(t_game game, char **map, t_vector img_pos)
+t_game	up_move(t_game game, char **map, t_vector img_pos, int i)
 {
-	int			i;
 	int			j;
 
-	i = -1;
 	while (++i < game.map.height)
 	{
 		j = -1;
@@ -104,6 +98,7 @@ t_game	up_move(t_game game, char **map, t_vector img_pos)
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i - 1][j] = 'P';
+				game = print_moves(game);
 			}
 		}
 	}
@@ -117,12 +112,10 @@ t_game	up_move(t_game game, char **map, t_vector img_pos)
 ** one step down. Thne move it 
 ** when 'S' or 'down arrow' is pressed.
 */
-t_game	down_move(t_game game, char **map, t_vector img_pos)
+t_game	down_move(t_game game, char **map, t_vector img_pos, int i)
 {
-	int			i;
 	int			j;
 
-	i = -1;
 	while (++i < game.map.height)
 	{
 		j = -1;
@@ -138,6 +131,7 @@ t_game	down_move(t_game game, char **map, t_vector img_pos)
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i + 1][j] = 'P';
+				game = print_moves(game);
 			}
 		}
 	}

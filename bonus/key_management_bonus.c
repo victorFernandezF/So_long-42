@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 18:29:27 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/14 11:29:40 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:44:35 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,6 @@ int	key_management_bonus(int keycode, t_game *g)
 	g->flag = 0;
 	if (keycode == KESC)
 		end_game(g);
-	if (check_allowed_keys(keycode))
-	{
-		g->moves += 1;
-		put_string_moves(*g);
-	}
 	if (keycode == KD || keycode == KRIGHT)
 		*g = right_move_bonus(*g, g->map.map, img_position, -1);
 	if (keycode == KA || keycode == KLEFT)
@@ -37,11 +32,12 @@ int	key_management_bonus(int keycode, t_game *g)
 	return (0);
 }
 
-void	put_string_moves(t_game game)
+t_game	put_string_moves(t_game game)
 {
 	char		*line;
 	char		*line2;
 
+	game.moves += 1;
 	line = ft_itoa(game.moves);
 	line2 = ft_itoa(game.moves - 1);
 	mlx_string_put(game.mlx, game.win.reference, 55,
@@ -50,4 +46,5 @@ void	put_string_moves(t_game game)
 		game.win.size.y - 15, 0xffffff, line);
 	free(line);
 	free(line2);
+	return (game);
 }

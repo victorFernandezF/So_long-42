@@ -6,7 +6,7 @@
 /*   By: victofer <victofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:33:21 by victofer          #+#    #+#             */
-/*   Updated: 2023/01/14 10:41:09 by victofer         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:51:36 by victofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ t_game	right_move_bonus(t_game game, char **map, t_vector pos, int i)
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i][j + 1] = 'P';
+				game = put_string_moves(game);
 			}
 		}
 	}
@@ -66,6 +67,7 @@ t_game	left_move_bonus(t_game game, char **map, t_vector pos, int i)
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i][j - 1] = 'P';
+				game = put_string_moves(game);
 			}
 		}
 	}
@@ -91,15 +93,11 @@ t_game	up_move_bonus(t_game game, char **map, t_vector pos, int i)
 			if (map[i][j] == 'P' && map[i - 1][j] != '1'
 					&& map[i - 1][j] != 'E')
 			{
-				if (map[i - 1][j] == 'C')
-					game.collect += 1;
-				if (map[i - 1][j] == 'F')
-					game.is_finish = 1;
-				if (map[i - 1][j] == 'S')
-					game.map.enemy = 1;
+				game = check_chars_move(game, map[i - 1][j]);
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i - 1][j] = 'P';
+				game = put_string_moves(game);
 			}
 		}
 	}
@@ -125,19 +123,26 @@ t_game	down_move_bonus(t_game game, char **map, t_vector pos, int i)
 			if (map[i][j] == 'P' && map[i + 1][j] != '1'
 					&& map[i + 1][j] != 'E' && map[i + 1][j] != 'F')
 			{
-				if (map[i + 1][j] == 'C')
-					game.collect += 1;
-				if (map[i + 1][j] == 'F')
-					game.is_finish = 1;
-				if (map[i + 1][j] == 'S')
-					game.map.enemy = 1;
+				game = check_chars_move(game, map[i + 1][j]);
 				map[i][j] = '0';
 				game.flag = 1;
 				map[i + 1][j] = 'P';
+				game = put_string_moves(game);
 			}
 		}
 	}
 	game = check_door(game);
 	game = is_game_over_b(game, map, game.player_down.reference, pos);
+	return (game);
+}
+
+t_game	check_chars_move(t_game game, char c)
+{
+	if (c == 'C')
+		game.collect += 1;
+	if (c == 'F')
+		game.is_finish = 1;
+	if (c == 'S')
+		game.map.enemy = 1;
 	return (game);
 }
