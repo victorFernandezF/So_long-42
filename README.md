@@ -15,7 +15,7 @@
 
 ### ESTADO
 
-| Estado del proyecto |     <p style="color:green; font-weight:bold">   TERMINADO          |
+| Estado del proyecto | TERMINADO          |
 |--------------|---------------------------|
 | Nota del proyecto   |  ![result](https://img.shields.io/badge/RESULTADO-125%25-green) |
 
@@ -53,10 +53,11 @@ git clone https://github.com/victorFernandezF/So_long-42.git
 |              |          Graphics         |
 
 ### STATUS
-#### Done
 
-![result](https://img.shields.io/badge/RESULT-1250%25-green)
-<!-- ![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive) -->
+| Project status | FINISHED          |
+|--------------|---------------------------|
+| Proyecto mark |  ![result](https://img.shields.io/badge/RESULT-125%25-green) |
+
 
 #### CLONE REPO
 ~~~~~
