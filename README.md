@@ -1,8 +1,7 @@
 
 # :video_game:  SO_LONG [:es:]
-
 #### Resumen 
-> Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles. 
+> Este proyecto es un pequeño juego 2D con la minilibx. Aprenderás sobre texturas, sprites y tiles.
 
 ### Preview Gift
 <img src="./preview_img/preview.gif" width=500px>  
@@ -15,10 +14,16 @@
 |              |          Graphics         |
 
 ### ESTADO
+
+| Estado del proyecto |          terminado          |
+|--------------|---------------------------|
+| Nota del proyecto   |  ![result](https://img.shields.io/badge/RESULTADO-125%25-green) |
+
+
 #### Terminado
 
 <!-- ![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive) -->
-![result](https://img.shields.io/badge/RESULTADO-125%25-green)
+
 
 #### CLONAR REPOSITORIO
 ~~~~~
