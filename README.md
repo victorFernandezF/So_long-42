@@ -15,10 +15,10 @@
 |              |          Graphics         |
 
 ### ESTADO
-#### in progress
+#### Terminado
 
-![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive)
-<!-- ![result](https://img.shields.io/badge/RESULTADO-125%25-green) -->
+<!-- ![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive) -->
+![result](https://img.shields.io/badge/RESULTADO-125%25-green)
 
 #### CLONAR REPOSITORIO
 ~~~~~
@@ -48,10 +48,10 @@ git clone https://github.com/victorFernandezF/So_long-42.git
 |              |          Graphics         |
 
 ### STATUS
-#### In Progress
+#### Done
 
-<!-- ![result](https://img.shields.io/badge/RESULT-1250%25-green) -->
-![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive)
+![result](https://img.shields.io/badge/RESULT-1250%25-green)
+<!-- ![Result](https://img.shields.io/badge/RESULT-IN_PROGRESS-inactive) -->
 
 #### CLONE REPO
 ~~~~~
