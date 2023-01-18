@@ -15,7 +15,7 @@
 
 ### ESTADO
 
-| Estado del proyecto |          terminado          |
+| Estado del proyecto |     <p style="color:green; font-weight:bold">   TERMINADO          |
 |--------------|---------------------------|
 | Nota del proyecto   |  ![result](https://img.shields.io/badge/RESULTADO-125%25-green) |
 
